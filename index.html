@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>売上公開ページ</title>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getFirestore, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    import { firebaseConfig } from "./firebaseConfig.js";
+  
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+  
+    const totalQuantityElem = document.getElementById("total-quantity");
+    const totalAmountElem = document.getElementById("total-amount");
+    const productListElem = document.getElementById("product-list");
+  
+    onSnapshot(collection(db, "pub_sales"), (snapshot) => {
+      let totalQuantity = 0;
+      let totalAmount = 0;
+      const productCounts = {};
+  
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const { total, items } = data;
+  
+        totalAmount += total;
+  
+        items.forEach(item => {
+          const { name, quantity } = item;
+          totalQuantity += quantity;
+  
+          if (!productCounts[name]) productCounts[name] = 0;
+          productCounts[name] += quantity;
+        });
+      });
+  
+      // 表示更新
+      totalQuantityElem.textContent = `${totalQuantity}個`;
+      totalAmountElem.textContent = `${totalAmount}円`;
+  
+      productListElem.innerHTML = "";
+      for (const name in productCounts) {
+        const li = document.createElement("li");
+        li.textContent = `${name}: ${productCounts[name]}個`;
+        productListElem.appendChild(li);
+      }
+    });
+  </script>
+  
+  
+</head>
+<body>
+  <body>
+    <h2>累計売上</h2>
+    <p>売上個数: <span id="total-quantity">-</span></p>
+    <p>売上金額: <span id="total-amount">-</span></p>
+    <h3>商品別売上個数</h3>
+    <ul id="product-list"></ul>
+  </body>
+</body>
+</html>
+
