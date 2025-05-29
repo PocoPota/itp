@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Rammetto+One&display=swap');
+
+*{
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body{
+  text-align: center;
+}
+
+.logo img{
+  width: 300px;
+  height: 300px;
+}
+
+.shopName{
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.uriage{
+  display: flex;
+  flex-direction: column;
+}
+
+.uriage span:first-child{
+  font-size: 18px;
+}
+
+.uriage span:last-child{
+  font-size: 100px;
+  color: rgb(121, 43, 255);
+  font-family: "Rammetto One", sans-serif;
+}
+
+.share {
+  color: #fff;
+  background-color: #eb6100;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+.share:hover,
+a.share:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.links{
+  margin-top: 40px;
+}
+
+.links ul{
+  padding: 0;
+  list-style: none;
+}
