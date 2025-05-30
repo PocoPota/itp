@@ -25,9 +25,8 @@ onSnapshot(collection(db, "pub_sales"), (snapshot) => {
   displayElem.textContent = `${abTotalQuantity}`;
 
   // Twitterリンクも更新
-  const text = `現在のペッパーランチの売り上げは ${abTotalQuantity} 個です！`;
+  const text = `現在のペッパーランチの売り上げは ${abTotalQuantity}個！ #ImagineThePepper #売上公開やど祭 https://pocopota.github.io/itp`;
   const url = new URL("https://twitter.com/intent/tweet");
   url.searchParams.set("text", text);
-  url.searchParams.set("hashtags", "ImagineThePepper,売上公開,やど祭");
   shareLink.href = url.toString();
 });
