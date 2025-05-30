@@ -36,6 +36,7 @@ body{
   margin-right: 0;
   color: #FF8C00;
   white-space: nowrap;
+  margin-left: 300px;
 }
 
 .animation-wrapper {
@@ -58,12 +59,12 @@ body{
 
 .animation-box {
   transform: translateX(100%);  /* 初めは画面の右外側に配置 */
-  animation: flow-text 18s linear infinite;
+  animation: flow-text 16s linear infinite;
 }
 
 @keyframes flow-text {
   0% {
-    transform: translateX(100%);  /* 初めは画面の右外側に配置 */
+    transform: translateX(0%);  /* 初めは画面の右外側に配置 */
   }
   100% {
     transform: translateX(-100%);  /* 終わりは画面の左外側に配置 */
