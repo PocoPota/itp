@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>売上グラフ</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="./chart.js"></script>
+  <style>
+ body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 16px;
+    }
+    h2 {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .chart-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    canvas {
+      background: #fff;
+      border: 1px solid #ccc;
+      max-width: 1000px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>累計売り上げ個数グラフ（1分ごと）</h2>
+  <canvas id="salesChart" width="800" height="400"></canvas>
+</body>
+</html>
