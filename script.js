@@ -25,7 +25,7 @@ onSnapshot(collection(db, "pub_sales"), (snapshot) => {
   displayElem.textContent = `${abTotalQuantity}`;
 
   // Twitterリンクも更新
-  const text = `現在のペッパーランチの売り上げは ${abTotalQuantity}個！ #ImagineThePepper #売上公開やど祭 https://pocopota.github.io/itp`;
+  const text = `現在のペッパーランチの売り上げは ${abTotalQuantity}個！  #ImagineThePepper #売上公開 #やど祭  https://pocopota.github.io/itp`;
   const url = new URL("https://twitter.com/intent/tweet");
   url.searchParams.set("text", text);
   shareLink.href = url.toString();
