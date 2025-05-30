@@ -110,18 +110,24 @@ body{
   font-family: "Mochiy Pop P One", sans-serif;
 }
 
+.share-p{
+  width: 300px;
+  margin: 0 auto;
+}
+
 .share {
   color: #fff;
   background-color: #eb6100;
   font-size: 1rem;
   font-weight: 600;
-  padding: 1rem 3rem;
+  padding: 12px 0px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   color: #212529;
   border-radius: 0.5rem;
   display: block;
+  margin: 0 auto;
 }
 .share:hover,
 a.share:hover {
