@@ -144,3 +144,32 @@ a.share:hover {
   padding: 0;
   list-style: none;
 }
+
+.d-uriage .d-uriage-inner span:nth-child(1){
+  font-size: 420px;
+}
+
+.d-uriage .d-uriage-inner span:nth-child(2){
+  font-size: 100px;
+}
+
+.d-animation-wrapper{
+  width: 1300px;
+  height: 70px;
+  padding: 20px 0;
+}
+
+.d-animation{
+  margin-left: 1300px;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+.d-animation-inner{
+  height: 70px;
+}
+
+.now-title{
+  font-size: 80px;
+  font-weight: 800;
+}

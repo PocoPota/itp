@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMAGINE THE PEPPER. リアルタイム売上</title>
+  <link href="./style.css" rel="stylesheet">
+  <meta property="og:url" content=" https://pocopota.github.io/itp" />
+  <meta property="og:title" content="IMAGINE THE PEPPER. リアルタイム売上" />
+  <meta property="og:description" content="IMAGINE THE PEPPER. リアルタイム売上公開システム" />
+  <meta property="og:site_name" content="IMAGINE THE PEPPER. リアルタイム売上" />
+  <meta property="og:image" content="https://pocopota.github.io/itp/ogp.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN2CW09PH2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QN2CW09PH2');
+  </script>
+</head>
+
+<body>
+  <div class="bg_pattern Moon"></div>
+  <div class="animation-wrapper d-animation-wrapper">
+    <div class="animation-inner d-animation-inner">
+      <div class="animation-box">
+        <p class="animation d-animation">第52回やどかり祭開催！　5/30・5/31両日出店！　ペッパーランチ販売！　つくぶい！コラボ特典あり！</p>
+      </div>
+    </div>
+  </div>
+  <div class="now-title">現在の売上！</div>
+  <div class="uriage d-uriage">
+    <div class="uriage-inner d-uriage-inner">
+      <span id="total"></span><span class="ko">個</span>
+    </div>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
