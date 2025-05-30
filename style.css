@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+JP:wght@100..900&family=Rammetto+One&display=swap');
 
 *{
   font-family: "Noto Sans JP", sans-serif;
@@ -27,10 +27,23 @@ body{
   font-size: 18px;
 }
 
-.uriage span:last-child{
+.uriage .uriage-inner{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  justify-content: center;
+}
+
+.uriage .uriage-inner span:nth-child(1){
   font-size: 100px;
   color: rgb(121, 43, 255);
   font-family: "Rammetto One", sans-serif;
+}
+
+.uriage .uriage-inner span:nth-child(2){
+  font-size: 35px;
+  color: rgb(121, 43, 255);
+  font-family: "Mochiy Pop P One", sans-serif;
 }
 
 .share {
@@ -44,6 +57,7 @@ body{
   text-decoration: none;
   color: #212529;
   border-radius: 0.5rem;
+  display: block;
 }
 .share:hover,
 a.share:hover {
@@ -52,6 +66,7 @@ a.share:hover {
 }
 
 .links{
+  display: block;
   margin-top: 20px;
 }
 
