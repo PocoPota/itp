@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <title>売上グラフ</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="./chart.js"></script>
   <style>
- body {
+    body {
       font-family: sans-serif;
       background: #f0f0f0;
       margin: 0;
       padding: 16px;
     }
+
     h2 {
       font-size: 1.2rem;
       text-align: center;
       margin-bottom: 16px;
     }
+
     .chart-container {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
     }
+
     canvas {
       background: #fff;
       border: 1px solid #ccc;
@@ -31,9 +35,26 @@
       margin: 0 auto;
     }
   </style>
+  <meta property="og:url" content=" https://pocopota.github.io/itp/chart.html" />
+  <meta property="og:title" content="IMAGINE THE PEPPER. リアルタイム売上" />
+  <meta property="og:description" content="IMAGINE THE PEPPER. リアルタイム売上公開システム" />
+  <meta property="og:site_name" content="IMAGINE THE PEPPER. リアルタイム売上" />
+  <meta property="og:image" content="https://pocopota.github.io/itp/ogp.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QN2CW09PH2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QN2CW09PH2');
+  </script>
 </head>
+
 <body>
   <h2>累計売上個数グラフ（1分ごと）</h2>
   <canvas id="salesChart" width="800" height="400"></canvas>
 </body>
+
 </html>
