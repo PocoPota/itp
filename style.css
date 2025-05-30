@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+JP:wght@100..900&family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Mochiy+Pop+P+One&family=Noto+Sans+JP:wght@100..900&family=Rammetto+One&display=swap');
 
 *{
   font-family: "Noto Sans JP", sans-serif;
@@ -6,7 +6,70 @@
 
 body{
   text-align: center;
+  margin: 0;
+  padding: 20px;
 }
+
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffd148;
+  opacity: 0.6;
+  z-index: -1;
+}
+.Moon {
+  background-image: radial-gradient( ellipse farthest-corner at 20px 20px , #ffc107, #ffc107 50%, #ffe9a7 50%);
+  background-size: 20px 20px;
+}
+
+.animation {
+  font-family: "DotGothic16", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+  color: #FF8C00;
+  white-space: nowrap;
+}
+
+.animation-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  height: fit-content;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.animation-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.animation-box {
+  transform: translateX(100%);  /* 初めは画面の右外側に配置 */
+  animation: flow-text 18s linear infinite;
+}
+
+@keyframes flow-text {
+  0% {
+    transform: translateX(100%);  /* 初めは画面の右外側に配置 */
+  }
+  100% {
+    transform: translateX(-100%);  /* 終わりは画面の左外側に配置 */
+  }
+}
+
 
 .logo img{
   width: 300px;
@@ -35,14 +98,14 @@ body{
 }
 
 .uriage .uriage-inner span:nth-child(1){
-  font-size: 100px;
-  color: rgb(121, 43, 255);
+  font-size: 110px;
+  color: #fc2a00;
   font-family: "Rammetto One", sans-serif;
 }
 
 .uriage .uriage-inner span:nth-child(2){
   font-size: 35px;
-  color: rgb(121, 43, 255);
+  color: #fc2a00;
   font-family: "Mochiy Pop P One", sans-serif;
 }
 
