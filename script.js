@@ -5,7 +5,7 @@ import { firebaseConfig } from "./firebaseConfig.js";
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const targetProductIds = ["kzv4Npr47H4veRoHpEfS", "oKYDsv2zRCFldMb5n2xw"];
+const targetProductIds = ["kzv4Npr47H4veRoHpEfS", "oKYDsv2zRCFldMb5n2xw", "wjIleZW1iDymcwS3oVwq"];
 const displayElem = document.getElementById("total");
 const shareLink = document.getElementById("share-link");
 
